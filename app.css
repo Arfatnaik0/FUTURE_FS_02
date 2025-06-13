@@ -5,6 +5,7 @@
 h1,h2,h3,h4,h5,h6{
     padding: 0;
     margin: 0;
+    color: rgba(255, 255, 255, 0.879);
 }
 
 
@@ -27,11 +28,12 @@ body{
     width: 50%;
     /* border: red solid 1px; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .body-weather{
-    height: 70%;
+    height: 68%;
     width:95%;
     background-color: rgba(255, 255, 255, 0.085);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
@@ -95,7 +97,9 @@ body{
 }
 
 .weather-show{
-    height: 90%;
+    height: 88%;
+    display: flex;
+    flex-direction: column;
 }
 
 .weather-main{
@@ -152,7 +156,7 @@ body{
     padding-top: 20px;
 }
 
-.sub-humidity{
+.sub{
     height: 100%;
     width: 35%;
     background-color: rgba(255, 255, 255, 0.085);
@@ -161,25 +165,13 @@ body{
     border-radius: 30px;
     backdrop-filter: blur(8px);
     transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
 }
 
-.sub-humidity:hover{
-    transform: scale(1.05);
-    transition: transform 0.25s;
-}
-
-.sub-air{
-    height: 100%;
-    width: 35%;
-    background-color: rgba(255, 255, 255, 0.085);
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 30px;
-    backdrop-filter: blur(8px);
-    transition: transform 0.25s;
-}
-
-.sub-air:hover{
+.sub:hover{
     transform: scale(1.05);
     transition: transform 0.25s;
 }
@@ -210,11 +202,15 @@ body{
     letter-spacing: 0.8px;
 }
 
+.stat-temp{
+    font-size: 3rem;
+}
+
 .stat-txt{
     
     font-size: 2rem;
     font-weight: 600;
-    padding-bottom: 1.8rem;
+    padding-bottom: 1rem;
 }
 
 .main-date{
@@ -237,4 +233,99 @@ body{
     padding-bottom: 1.5rem;
 }
 
+.sub-img{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.sub-img img{
+    height: 70%;
+}
+
+.border{
+    width: 40%;
+    border: 0.5px white solid;
+    margin-top: 10px;
+}
+
+.sub-value{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-forecast{
+    height: 28%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.forecast{
+    height: 100%;
+    width: 18%;
+    background-color: rgba(255, 255, 255, 0.085);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s;
+}
+
+.forecast:hover{
+    transform: scale(1.05);
+    transition: transform 0.25s;
+}
+
+.forecast-date,.forecast-temp{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forecast-icon{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.weather-default,
+.weather-error{
+    height: 80%;
+    width: 80%;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather-default h1,
+.weather-error h1{
+    font-size: 3rem;
+}
+
+.weather-default h2,
+.weather-error h2{
+    font-size: 1.5rem;
+    font-weight: 100;
+    width: 80%;
+    text-align: center;
+}
