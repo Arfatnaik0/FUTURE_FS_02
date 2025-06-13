@@ -189,6 +189,7 @@ body{
     align-items: center;
 }
 
+
 .status-text{
     height: 100%;
     width: 60%;
@@ -355,4 +356,32 @@ body{
     100% {
         opacity: 1;
     }
+}
+
+@media (max-width:768px) {
+    .status-img{
+        width: 40%;
+        margin-left: 10%;
+
+    }
+
+    .status-text{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .stat-cityname{
+        font-size: 1rem;
+    }
+
+    .stat-temp{
+        font-size: 2rem;
+    }
+    .stat-txt{
+        font-size: 1.5rem;
+    }
+
+    
 }
