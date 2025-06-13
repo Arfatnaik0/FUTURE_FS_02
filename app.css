@@ -359,29 +359,124 @@ body{
 }
 
 @media (max-width:768px) {
-    .status-img{
-        width: 40%;
-        margin-left: 10%;
-
+    .body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+.weather-search{
+    padding-top: 1rem;
+}
+    .main-status{
+        height: 70%;
     }
 
-    .status-text{
+    .main-date{
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    .weather-main{
+        padding-top: 0;
+    }
+    .weather-sub {
+        flex-direction: column;
+        gap: 20px;
+        height: 58%;
+        padding-top: 0;
+        margin-top: -1rem;
+    }
+
+    .day{
+        font-size: 2rem;
+    }
+
+    .month-year{
+        font-size: 1rem;
+        padding-left: 1.6rem;
+        padding-bottom: 0;
+    }
+
+    .sub {
+        width: 100%;
+        height: 60%;
+        flex-direction: row;
+        
+    }
+
+    
+
+    .sub-img h1{
+        font-size: 1.7rem;
+    }
+    
+    .border{
+        height: 50%;
+        width: 0;
+        margin-top: 0;
+    }
+
+    .body-forecast {
+        overflow-x: auto;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .forecast {
+        min-width: 150px;
+        flex-shrink: 0;
+    }
+
+    .status-img {
+        width: 40%;
+        margin-left: 10%;
+    }
+
+    .status-text {
         width: 50%;
         display: flex;
         align-items: center;
     }
     
-    
-    .stat-cityname{
+    .stat-cityname {
         font-size: 1rem;
     }
 
-    .stat-temp{
+    .stat-temp {
         font-size: 2rem;
     }
-    .stat-txt{
-        font-size: 1.5rem;
+
+    .stat-txt {
+        font-size: 1.2rem;
     }
 
+    .search-button{
+        height: 50%;
+        top: 13px;
+        right: 19px;
+    }
+
+    .search-input{
+        font-size: 0.9rem;
+    }
+    
+
+    .weather-default h1{
+        font-size: 2rem;
+    }
+
+    .weather-default h2{
+        font-size: 1rem;
+    }
+
+    .weather-error h1{
+        font-size: 2rem;
+    }
+
+    .weather-error h2{
+        font-size: 1rem;
+    }
     
 }
