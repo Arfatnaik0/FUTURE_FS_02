@@ -38,9 +38,19 @@ searchInput.addEventListener("keydown",(e)=>
 })
 
 async function getFetchData(endpoint,city){
-    const apiUrl = `https://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=${API_KEY}&units=metric`;
-    const response = await fetch(apiUrl);
-    return response.json();
+    try {
+        const apiUrl = `https://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=${API_KEY}&units=metric`;
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (!response.ok) {
+            showDisplaySection(errorMessage);
+            throw new Error(data.message || 'Failed to fetch weather data');
+        }
+        return data;
+    } catch (error) {
+        showDisplaySection(errorMessage);
+        throw error;
+    }
 }
 
 function getWeatherIcon(id) {
