@@ -1,0 +1,215 @@
+*{
+    font-family: "Ancizar Sans", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: url(assets/bg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+
+}
+
+.body{
+    height: 90%;
+    width: 50%;
+    border: red solid 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.body-weather{
+    height: 70%;
+    width:95%;
+    background-color: rgba(255, 255, 255, 0.085);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.weather-search{
+    height:10%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.search-bar{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.search-input{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.227);
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    outline: none;
+    text-indent: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 1rem;
+    padding-right: 50px;
+}
+
+
+
+.search-button{
+    height:70%;
+    width: 15%;
+    background: none;
+    border: none;
+    position:absolute;
+    right: 10px;
+    top: 7px;
+}
+
+.search-button:hover{
+    cursor: pointer;
+}
+
+.search-button img{
+    height: 100%;
+}
+
+.weather-show{
+    height: 90%;
+}
+
+.weather-main{
+    width: 100%;
+    height:40%;
+    padding-top: 15px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.main-status{
+    height: 100%;
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.085);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.main-date{
+    height: 100%;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.085);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.weather-sub{
+    width: 90%;
+    height:45%;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.sub-humidity{
+    height: 100%;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.085);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.sub-air{
+    height: 100%;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.085);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+.main-status{
+    display: flex;
+}
+    
+
+.status-img{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-text{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: left;
+    color: rgba(255, 255, 255, 0.879);
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.8px;
+}
+
+.stat-txt{
+    
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1.8rem;
+}
+
+.main-date{
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.879);
+    letter-spacing: 0.8px;
+}
+
+.day{
+    font-size: 4rem;
+    padding-left: 1rem;
+}
+
+.month-year{
+    font-size: 1.5rem;
+    padding-left: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+
