@@ -25,7 +25,7 @@ body{
 .body{
     height: 90%;
     width: 50%;
-    border: red solid 1px;
+    /* border: red solid 1px; */
     display: flex;
     justify-content: center;
 }
@@ -116,7 +116,14 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
+    transition: transform 0.25s;
 }
+
+.main-status:hover{
+    transform: scale(1.05);
+    transition: transform 0.25s;
+}
+
 
 .main-date{
     height: 100%;
@@ -126,6 +133,12 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
+    transition: transform 0.25s;
+}
+
+.main-date:hover{
+    transform: scale(1.05);
+    transition: transform 0.25s;
 }
 
 .weather-sub{
@@ -147,6 +160,12 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
+    transition: transform 0.25s;
+}
+
+.sub-humidity:hover{
+    transform: scale(1.05);
+    transition: transform 0.25s;
 }
 
 .sub-air{
@@ -157,6 +176,12 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
+    transition: transform 0.25s;
+}
+
+.sub-air:hover{
+    transform: scale(1.05);
+    transition: transform 0.25s;
 }
 
 .main-status{
