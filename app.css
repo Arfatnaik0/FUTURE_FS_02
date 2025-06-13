@@ -363,7 +363,8 @@ body{
         width: 100%;
         display: flex;
         align-items: center;
-        height: 86vh;
+        height: 88vh;
+        margin-top: -4rem;
     }
 .weather-search{
     padding-top: 1rem;
