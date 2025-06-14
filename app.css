@@ -110,6 +110,7 @@ body{
     align-items:center;
     justify-content: space-around;
     flex-direction: row;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .main-status{
@@ -120,12 +121,9 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
-    transition: transform 0.25s;
-}
-
-.main-status:hover{
-    transform: scale(1.05);
-    transition: transform 0.25s;
+    opacity: 0;
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 
@@ -137,12 +135,9 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
-    transition: transform 0.25s;
-}
-
-.main-date:hover{
-    transform: scale(1.05);
-    transition: transform 0.25s;
+    opacity: 0;
+    animation: slideInFromRight 0.5s ease-out forwards;
+    animation-delay: 0.4s;
 }
 
 .weather-sub{
@@ -154,6 +149,7 @@ body{
     flex-direction: row;
     margin: auto;
     padding-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .sub{
@@ -164,17 +160,25 @@ body{
     border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     backdrop-filter: blur(8px);
-    transition: transform 0.25s;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction:column;
+    opacity: 0;
+    
 }
 
-.sub:hover{
-    transform: scale(1.05);
-    transition: transform 0.25s;
+.sub:nth-child(1) { 
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    animation-delay: 0.45s; 
 }
+
+.sub:nth-child(2) { 
+    animation: slideInFromRight 0.5s ease-out forwards;
+    animation-delay: 0.45s; 
+}
+
+
 
 .main-status{
     display: flex;
@@ -342,6 +346,17 @@ body{
     0% {
         opacity: 0;
         transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
     }
     100% {
         opacity: 1;
