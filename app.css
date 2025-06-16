@@ -375,7 +375,7 @@ body{
 
 @media (max-width:768px) {
     .body {
-        width: 100%;
+        width: 100vw;
         display: flex;
         align-items: center;
         height: 88vh;
