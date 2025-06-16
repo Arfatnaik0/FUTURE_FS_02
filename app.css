@@ -1,7 +1,5 @@
 *{
     font-family: "Ancizar Sans", sans-serif;
-    box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -450,8 +448,8 @@ body{
         height: 99%;
     }
 
-    .forecast-icon{
-        height:60%
+    .forecast-icon img{
+        height: 100%;
     }
 
     .status-img {
