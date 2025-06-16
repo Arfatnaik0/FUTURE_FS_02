@@ -20,7 +20,7 @@ const forecastContainer=document.querySelector('.body-forecast');
 
 
 
-
+// adds an event listener to the search button so when it is clicked and the input value is not an empty string it passes the value to updateweatherinfo function
 searchButton.addEventListener('click',()=>
 {
     if(searchInput.value.trim() != ''){
@@ -29,6 +29,8 @@ searchButton.addEventListener('click',()=>
     }
 })
 
+
+// this is so that the enter key also does the same search as above
 searchInput.addEventListener("keydown",(e)=>
 {
     if(e.key=="Enter" && searchInput.value.trim() != ''){
@@ -37,6 +39,7 @@ searchInput.addEventListener("keydown",(e)=>
     }
 })
 
+// takes the endpoint which can be weather or forecast and the city and fetches the data and if response is not okay display an error message if it okay then return data
 async function getFetchData(endpoint,city){
     try {
         const apiUrl = `https://api.openweathermap.org/data/2.5/${endpoint}?q=${city}&appid=${API_KEY}&units=metric`;
@@ -53,6 +56,7 @@ async function getFetchData(endpoint,city){
     }
 }
 
+// used to get the id of icon
 function getWeatherIcon(id) {
     if(id<=232) return 'thunderstorm';
     if(id<=321) return 'drizzle';
@@ -63,6 +67,7 @@ function getWeatherIcon(id) {
     if(id<=804) return 'clouds';
 }
 
+// used for determining the suffix of date
 function getOrdinalSuffix(day) {
     if (day > 3 && day < 21) return 'th';
     switch (day % 10) {
@@ -73,6 +78,7 @@ function getOrdinalSuffix(day) {
     }
 }
 
+// function to get current day
 function getCurrentDay() {
     const now = new Date();
     const day = now.getDate(); // numeric day (1-31)
@@ -81,6 +87,7 @@ function getCurrentDay() {
     return `${day}${suffix}`; // e.g., 13th June 2025
 }
 
+// similarly gets month and year
 function getCurrentMonthYear() {
     const now = new Date();
     const month = now.toLocaleString('en-GB', { month: 'short' }).toUpperCase();
@@ -89,7 +96,9 @@ function getCurrentMonthYear() {
 }
 
 
-
+// city is passed in the function it then runs and stores data in weatherData if data code is not 200 which signifies proper expected output it displays error message else takes the value from
+// we need only like name of city temp and humidty wind etc.
+// then replaces the text in html to suitable weather info then runs the forecast function and displays it.
 async function updateWeatherInfo(city){
     const weatherData= await getFetchData('weather',city)
     if(weatherData.cod !=200){
@@ -118,6 +127,9 @@ async function updateWeatherInfo(city){
     showDisplaySection(weatherInfo,forecast)
 }
 
+// simliar to above the forecast function
+// sets the inner html to empty so that the data can show and not cause problems like double
+// if necessary values return from the api updateforecastitems function runs.
 async function updateForecastInfo(city){
     const forecastData=await getFetchData('forecast',city);
     const timeTaken='12:00:00'
@@ -136,6 +148,7 @@ async function updateForecastInfo(city){
     
 }
 
+// similar to updateweatherinfo
 function updateForecastItems(weatherData){
     const {
         dt_txt:date,
@@ -168,7 +181,7 @@ function updateForecastItems(weatherData){
     forecast.insertAdjacentHTML('beforeend',forecastItem)
 }
 
-
+// it disables all sections then loops over all sections and then displays only the one you need
 function showDisplaySection(section1,section2){
 [errorMessage,defaultMessage,weatherInfo,forecast].forEach(section=> section.style.display='none');
 section1.style.display='flex';
