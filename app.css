@@ -1,5 +1,7 @@
 *{
     font-family: "Ancizar Sans", sans-serif;
+    background-color: lightblue;
+    z-index:-1;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -15,7 +17,6 @@ body{
     width: 100vw;
     background: url(assets/bg.webp);
     background-size: cover;
-    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
